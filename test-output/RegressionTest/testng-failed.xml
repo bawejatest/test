@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionTest]">
+  <listeners>
+    <listener class-name="Resources.ExtentReportListener"/>
+  </listeners>
+  <test name="GetAPIResponseExcel">
+    <classes>
+      <class name="Base.Base"/>
+      <class name="Page.Loginpage"/>
+      <class name="Test.LoginTest"/>
+      <class name="Page.CarriersPage"/>
+      <class name="Test.CarriersTest"/>
+    </classes>
+  </test> <!-- GetAPIResponseExcel -->
+  <test name="GetAPIResponseExcel(failed)">
+    <classes>
+      <class name="Test.LoginTest">
+        <methods>
+          <include name="enter_valid_username_and_valid_password"/>
+          <include name="browsersetup"/>
+          <include name="enter_invalid_username_and_invalid_password"/>
+          <include name="enter_invalid_username_and_valid_password"/>
+          <include name="enter_valid_password"/>
+          <include name="enter_valid_username"/>
+        </methods>
+      </class> <!-- Test.LoginTest -->
+      <class name="Test.CarriersTest">
+        <methods>
+          <include name="browsersetup"/>
+          <include name="open_Carriers_menuitems"/>
+        </methods>
+      </class> <!-- Test.CarriersTest -->
+    </classes>
+  </test> <!-- GetAPIResponseExcel(failed) -->
+</suite> <!-- Failed suite [RegressionTest] -->
